@@ -1,9 +1,7 @@
 import { getProfile } from '@/lib/actions';
 import React from 'react';
 
-type Props = {};
-
-export default async function Profile({}: Props) {
+export default async function Profile() {
   const res = await getProfile();
 
   return (

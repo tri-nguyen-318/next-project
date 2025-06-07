@@ -1,9 +1,8 @@
 import React from 'react';
-import { XCells } from './Cell';
 import clsx from 'clsx';
 
 type Props = {
-  xCells: XCells;
+  xCells: any[];
   className?: string;
   position?: 'top' | 'bottom';
 };

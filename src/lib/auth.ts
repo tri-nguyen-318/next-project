@@ -105,7 +105,6 @@ export const refreshToken = async (
     });
 
     if (!response.ok) {
-      console.log('🚀 ~ response:', response);
       throw new Error('Failed to refresh token');
     }
 
@@ -128,8 +127,8 @@ export const refreshToken = async (
 
     return accessToken;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error refreshing token:', error);
-    // Handle the error appropriately, e.g., redirect to sign-in page
     redirect('/auth/signin');
   }
 };

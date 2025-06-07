@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react';
+import React from 'react';
 import { Button, ButtonProps } from '@mantine/core';
 
 // type Props = ComponentProps<typeof Button> ;

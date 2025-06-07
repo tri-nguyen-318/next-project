@@ -5,7 +5,6 @@ import React from 'react';
 
 export default async function Dashboard() {
   const session = await getSession();
-  console.log('🚀 ~ Dashboard ~ session:', session);
 
   if (!session || !session.user) {
     redirect('/auth/signin');

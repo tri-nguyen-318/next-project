@@ -54,6 +54,7 @@ export async function getSession() {
 
     return session.payload as Session;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Error verifying session:', error);
     redirect('/auth/signin');
   }

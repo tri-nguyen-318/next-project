@@ -43,7 +43,7 @@ const iconMap = (
 type Props = {
   coordinate?: Coordinate;
   piece: Piece;
-  style: React.CSSProperties;
+  style?: React.CSSProperties;
 };
 
 export default function PieceComponent({ piece, coordinate, style }: Props) {

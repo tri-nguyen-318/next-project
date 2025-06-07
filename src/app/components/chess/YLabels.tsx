@@ -1,9 +1,8 @@
 import React from 'react';
-import { YCells } from './Cell';
 import clsx from 'clsx';
 
 type Props = {
-  yCells: YCells;
+  yCells: any[];
   className?: string;
   position?: 'left' | 'right';
 };

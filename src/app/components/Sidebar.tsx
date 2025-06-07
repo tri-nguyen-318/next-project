@@ -9,22 +9,10 @@ import dayjs from 'dayjs';
 export default function Sidebar() {
   const dispatch = useAppDispatch();
 
-  const {
-    totalSeconds,
-    milliseconds,
-    seconds,
-    minutes,
-    hours,
-    days,
-    isRunning,
-    start,
-    pause,
-    resume,
-    restart,
-  } = useTimer({
+  const { seconds, minutes, start } = useTimer({
     expiryTimestamp: dayjs().add(15, 'minutes').toDate(),
     autoStart: false,
-    onExpire: () => console.warn('onExpire called'),
+    onExpire: () => {},
     interval: 1000,
   });
 

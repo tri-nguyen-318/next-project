@@ -1,9 +1,8 @@
 import { getSession } from '@/lib/session';
-import Board from './components/chess/Board';
 import Sidebar from './components/Sidebar';
 
 export default async function Page() {
-  const session = await getSession();
+  const _session = await getSession();
 
   return (
     <div
@@ -12,9 +11,7 @@ export default async function Page() {
         height: 'calc(100vh - 40px)',
       }}
     >
-      <div className='flex items-center justify-center flex-col gap-2 p-4'>
-        {/* <Board /> */}
-      </div>
+      <div className='flex items-center justify-center flex-col gap-2 p-4' />
 
       <Sidebar />
     </div>

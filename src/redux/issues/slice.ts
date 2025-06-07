@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface IssueState {
-  issues: Issue[];
+  issues: any[];
 }
 
 const initialState = { issues: [] } satisfies IssueState as IssueState;
@@ -11,7 +11,7 @@ const issueSlice = createSlice({
   name: 'issues',
   initialState,
   reducers: {
-    addIssue(state, action: PayloadAction<{ issue: Issue }>) {
+    addIssue(state, action: PayloadAction<{ issue: any }>) {
       state.issues.push(action.payload.issue);
     },
   },
