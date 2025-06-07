@@ -6,7 +6,7 @@ export default async function SignInButton() {
   const session = await getSession();
 
   return (
-    <div className='flex items-center gap-2 ml-auto'>
+    <div className='ml-auto flex items-center gap-2'>
       {!session || !session.user ? (
         <>
           <Link href={'/auth/signin'}>Sign In</Link>

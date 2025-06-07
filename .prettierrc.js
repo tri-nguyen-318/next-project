@@ -19,4 +19,5 @@ module.exports = {
   useTabs: false,
   embeddedLanguageFormatting: 'auto',
   jsxBracketSameLine: false,
+  plugins: ['prettier-plugin-tailwindcss'],
 };

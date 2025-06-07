@@ -11,7 +11,7 @@ export default function XLabels({ xCells, className, position }: Props) {
   return (
     <div
       className={clsx(
-        'absolute flex w-full h-8 font-bold',
+        'absolute flex h-8 w-full font-bold',
         position === 'top' ? '-top-8' : '-bottom-8',
         className,
       )}
@@ -19,7 +19,7 @@ export default function XLabels({ xCells, className, position }: Props) {
       {xCells.map((item) => (
         <div
           key={item}
-          className='flex-1 flex items-center justify-center'
+          className='flex flex-1 items-center justify-center'
         >
           {item}
         </div>

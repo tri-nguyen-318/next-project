@@ -7,10 +7,10 @@ import { AUTHEN_FORMS_MIN_WIDTH } from '@/utils/constant';
 
 export default function SignInPage() {
   return (
-    <div className='bg-white p-8 rounded-lg shadow-lg w-96 flex flex-col justify-center items-center'>
-      <h1 className='text-center text-2xl font-bold mb-4'>Sign In Page</h1>
+    <div className='flex w-96 flex-col items-center justify-center rounded-lg bg-white p-8 shadow-lg'>
+      <h1 className='mb-4 text-center text-2xl font-bold'>Sign In Page</h1>
       <div
-        className='flex justify-between text-sm flex-col gap-1'
+        className='flex flex-col justify-between gap-1 text-sm'
         style={{
           minWidth: AUTHEN_FORMS_MIN_WIDTH,
         }}
@@ -19,7 +19,7 @@ export default function SignInPage() {
 
         <Footer />
 
-        <hr className='pb-2 mt-2' />
+        <hr className='mt-2 pb-2' />
 
         <div className='mt-1'>
           <GoogleSignInButton href={`${BACKEND_URL}/auth/google/login`} />

@@ -11,7 +11,7 @@ export default function YLabels({ yCells, className, position }: Props) {
   return (
     <div
       className={clsx(
-        'absolute  flex w-8 flex-col h-full items-center font-bold',
+        'absolute flex h-full w-8 flex-col items-center font-bold',
         position === 'left' ? '-left-8' : '-right-8',
         className,
       )}
@@ -19,7 +19,7 @@ export default function YLabels({ yCells, className, position }: Props) {
       {yCells.map((item) => (
         <div
           key={item}
-          className='flex-1 flex justify-center items-center w-full'
+          className='flex w-full flex-1 items-center justify-center'
         >
           {item}
         </div>

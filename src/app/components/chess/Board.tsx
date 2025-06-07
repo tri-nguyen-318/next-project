@@ -14,7 +14,7 @@ export default function Board() {
   return (
     <div
       className={clsx(
-        'aspect-square rounded-lg board relative flex-1 overflow-hidden',
+        'board relative aspect-square flex-1 overflow-hidden rounded-lg',
       )}
     >
       <YLabels
@@ -34,7 +34,7 @@ export default function Board() {
         className='bottom'
       />
 
-      <div className={clsx('grid grid-cols-8 h-full board-content')}>
+      <div className={clsx('board-content grid h-full grid-cols-8')}>
         {yCells.map((y, yIndex) => {
           return xCells.map((x, xIndex) => {
             return (

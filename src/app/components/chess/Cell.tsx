@@ -71,7 +71,7 @@ export default function Cell({ coordinate }: Props) {
         isTopRight && 'rounded-tr',
         isBottomLeft && 'rounded-bl',
         isBottomRight && 'rounded-br',
-        'flex items-center justify-center aspect-square',
+        'flex aspect-square items-center justify-center',
       )}
       style={{
         background: getBackground(),
@@ -80,7 +80,7 @@ export default function Cell({ coordinate }: Props) {
     >
       {isCellValidToMove() && (
         <div
-          className='w-2 h-2 rounded-full absolute'
+          className='absolute h-2 w-2 rounded-full'
           style={{
             background: 'var(--cell-background-valid)',
           }}

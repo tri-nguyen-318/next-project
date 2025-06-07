@@ -82,7 +82,7 @@ export default function PieceComponent({ piece, coordinate, style }: Props) {
   return (
     <div
       ref={ref}
-      className='w-4/5 h-4/5 piece'
+      className='piece h-4/5 w-4/5'
       onClick={onSelectPiece}
       style={style}
     >

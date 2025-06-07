@@ -24,7 +24,7 @@ export default function RootLayout({
         <StoreProvider>
           <ColorSchemeScript />
           <AppBar />
-          <div className='absolute top-10 bottom-0 left-0 right-0'>
+          <div className='prose absolute top-10 right-0 bottom-0 left-0'>
             <MantineProvider>{children}</MantineProvider>
           </div>
         </StoreProvider>

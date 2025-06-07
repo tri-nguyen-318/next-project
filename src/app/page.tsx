@@ -12,7 +12,7 @@ export default async function Page() {
         height: 'calc(100vh - 40px)',
       }}
     >
-      <div className='flex items-center justify-center flex-col gap-2 p-4' />
+      <div className='flex flex-col items-center justify-center gap-2 p-4' />
       <Sidebar />
     </div>
   );

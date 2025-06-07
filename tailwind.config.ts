@@ -10,6 +10,6 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  // plugins: [Typography],
+  plugins: [Typography],
 };
 export default config;

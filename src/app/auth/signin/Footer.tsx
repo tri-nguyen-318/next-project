@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className='flex gap-6 justify-between'>
+    <div className='flex justify-between gap-6'>
       <p>Don&apos;t have account</p>
       <Link
         className='underline'

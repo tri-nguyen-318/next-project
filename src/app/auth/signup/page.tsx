@@ -5,10 +5,10 @@ import { AUTHEN_FORMS_MIN_WIDTH } from '@/utils/constant';
 
 export default async function SignUpPage() {
   return (
-    <div className='bg-white p-8 rounded-lg shadow-lg w-96 flex flex-col justify-center items-center'>
-      <h1 className='text-center text-2xl font-bold mb-4'>Sign Up Page</h1>
+    <div className='flex w-96 flex-col items-center justify-center rounded-lg bg-white p-8 shadow-lg'>
+      <h1 className='mb-4 text-center text-2xl font-bold'>Sign Up Page</h1>
       <div
-        className='flex justify-between text-sm flex-col gap-1'
+        className='flex flex-col justify-between gap-1 text-sm'
         style={{
           minWidth: AUTHEN_FORMS_MIN_WIDTH,
         }}

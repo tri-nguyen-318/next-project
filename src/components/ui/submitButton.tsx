@@ -13,7 +13,7 @@ export default function SubmitButton({ children }: Props) {
     <Button
       type='submit'
       aria-disabled={pending}
-      className='w-full mt-2'
+      className='mt-2 w-full'
     >
       {children}
     </Button>

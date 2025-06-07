@@ -21,9 +21,9 @@ export default function Sidebar() {
   };
 
   return (
-    <div className='basis-xs h-full md:min-w-64 p-4 flex gap-2 flex-col'>
+    <div className='flex h-full basis-xs flex-col gap-2 p-4 md:min-w-64'>
       <div
-        className='flex font-medium text-5xl justify-center'
+        className='flex justify-center text-5xl font-medium'
         style={{
           color: 'var(--mantine-color-blue-6)',
         }}
