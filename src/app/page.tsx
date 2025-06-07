@@ -6,13 +6,13 @@ export default async function Page() {
 
   return (
     <div
+      data-testid='app-page'
       className='flex items-center justify-center gap-2'
       style={{
         height: 'calc(100vh - 40px)',
       }}
     >
       <div className='flex items-center justify-center flex-col gap-2 p-4' />
-
       <Sidebar />
     </div>
   );
