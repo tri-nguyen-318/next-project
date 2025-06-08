@@ -17,7 +17,7 @@ export default function TypographyText({
     <p
       className={cn('!my-1', className)}
       style={{
-        color: `var(${type})`,
+        color: type,
       }}
     >
       {children}

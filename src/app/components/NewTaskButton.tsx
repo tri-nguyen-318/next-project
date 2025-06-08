@@ -1,10 +1,10 @@
 'use client';
 
-import MantineButton from '@/components/MantineButton';
+import { Button } from '@/components/ui/button';
 import React from 'react';
 
 export default function NewTaskButton() {
   const onAddNewTask = () => {};
 
-  return <MantineButton onClick={onAddNewTask}>Add new task</MantineButton>;
+  return <Button onClick={onAddNewTask}>Add new task</Button>;
 }

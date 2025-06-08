@@ -1,5 +1,5 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
-import clsx from 'clsx';
 
 type Props = {
   xCells: any[];
@@ -10,7 +10,7 @@ type Props = {
 export default function XLabels({ xCells, className, position }: Props) {
   return (
     <div
-      className={clsx(
+      className={cn(
         'absolute flex h-8 w-full font-bold',
         position === 'top' ? '-top-8' : '-bottom-8',
         className,

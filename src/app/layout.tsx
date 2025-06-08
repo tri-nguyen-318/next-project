@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import MantineProvider from '@/components/MantineProvider';
-import { ColorSchemeScript } from '@mantine/core';
 import StoreProvider from './storeProvider';
 import AppBar from '@/components/ui/appBar';
+import { ThemeProvider } from './theme/ThemeProvider';
+import { ThemeContextProvider } from './theme/ThemeContext';
 
 export const metadata: Metadata = {
   title: `Tri's Next.js App`,
@@ -20,14 +20,22 @@ export default function RootLayout({
       lang='en'
       suppressHydrationWarning
     >
-      <body>
-        <StoreProvider>
-          <ColorSchemeScript />
-          <AppBar />
-          <div className='prose absolute top-10 right-0 bottom-0 left-0'>
-            <MantineProvider>{children}</MantineProvider>
-          </div>
-        </StoreProvider>
+      <body className='h-screen w-screen'>
+        <ThemeContextProvider>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <StoreProvider>
+              <AppBar />
+              <div className='prose absolute top-10 right-0 bottom-0 left-0 min-w-screen'>
+                {children}
+              </div>
+            </StoreProvider>
+          </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

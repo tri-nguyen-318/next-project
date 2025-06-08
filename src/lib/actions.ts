@@ -10,3 +10,5 @@ export const getProfile = async () => {
 
   return result;
 };
+
+export const createInvoice = async (data: any) => {};

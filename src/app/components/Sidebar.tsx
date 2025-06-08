@@ -1,10 +1,10 @@
 'use client';
-import MantineButton from '@/components/MantineButton';
 import { chessActions } from '@/redux/chess/slice';
 import { useAppDispatch } from '@/redux/hooks';
 import { useTimer } from 'react-timer-hook';
 import React from 'react';
 import dayjs from 'dayjs';
+import { Button } from '@/components/ui/button';
 
 export default function Sidebar() {
   const dispatch = useAppDispatch();
@@ -25,7 +25,7 @@ export default function Sidebar() {
       <div
         className='flex justify-center text-5xl font-medium'
         style={{
-          color: 'var(--mantine-color-blue-6)',
+          color: 'var(--color-blue-600)',
         }}
       >
         <div>{minutes}</div>
@@ -33,15 +33,15 @@ export default function Sidebar() {
         <div>{String(seconds).length !== 1 ? seconds : `0${seconds}`}</div>
       </div>
 
-      <MantineButton
+      <Button
         variant='default'
         onClick={() => {
           start();
         }}
       >
         Start game
-      </MantineButton>
-      <MantineButton onClick={onNewGame}>New game</MantineButton>
+      </Button>
+      <Button onClick={onNewGame}>New game</Button>
     </div>
   );
 }

@@ -9,9 +9,9 @@ import {
 import { chessActions } from '@/redux/chess/slice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { isValidCoordinate, isValidMove } from '@/utils/helpers';
-import clsx from 'clsx';
 import { Coordinate } from './types/types';
 import PieceComponent from './Piece';
+import { cn } from '@/lib/utils';
 
 type Props = {
   coordinate: Coordinate;
@@ -65,7 +65,7 @@ export default function Cell({ coordinate }: Props) {
 
   return (
     <div
-      className={clsx(
+      className={cn(
         isEven && 'bg-white',
         isTopLeft && 'rounded-tl',
         isTopRight && 'rounded-tr',

@@ -26,6 +26,7 @@ const eslintConfig = [
       'no-console': 'warn',
       'react/self-closing-comp': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
