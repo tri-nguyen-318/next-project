@@ -6,11 +6,13 @@ import ModeButton from '../common/ModeButton';
 export default function AppBar() {
   return (
     <>
-      <div className='bg-primary text-primary-foreground absolute right-0 left-0 flex gap-2 p-2 font-medium shadow'>
-        <Link href={'/'}>Home</Link>
-        <Link href={'/dashboard'}>Dashboard</Link>
-        <Link href={'/profile'}>Profile</Link>
-        <Link href={'/invoice'}>Invoice</Link>
+      <div className='bg-primary text-primary-foreground flex h-10 justify-between gap-2 p-2 font-medium shadow'>
+        <div className='flex items-center gap-2'>
+          <Link href={'/'}>Home</Link>
+          <Link href={'/dashboard'}>Dashboard</Link>
+          <Link href={'/profile'}>Profile</Link>
+          <Link href={'/invoice'}>Invoice</Link>
+        </div>
 
         <div className='ml-auto flex items-center gap-2'>
           <SignInButton />

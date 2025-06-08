@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/table';
 import { createInvoice } from '@/lib/actions';
 import TypopraphyCode from '@/components/typography/TypopraphyCode';
+import { CreateInvoiceDialog } from './components/CreateInvoiceDialog';
 
 export default function Invoice() {
   const [query, setQuery] = useState<string>('');
@@ -28,6 +29,10 @@ export default function Invoice() {
 
   const onShowCreateInvoice = () => {
     setIsShowCreateInvoice(true);
+  };
+
+  const onCloseCreateDialog = () => {
+    setIsShowCreateInvoice(false);
   };
 
   const onSeeding = () => {
@@ -69,7 +74,7 @@ export default function Invoice() {
             Seeding
           </Button>
           <Button
-            onClick={onCreateInvoice}
+            onClick={onShowCreateInvoice}
             variant='default'
           >
             Create
@@ -96,6 +101,11 @@ export default function Invoice() {
           </TableRow>
         </TableBody>
       </Table>
+
+      <CreateInvoiceDialog
+        isOpen={isShowCreateInvoice}
+        onClose={onCloseCreateDialog}
+      />
       {/* <div>
         {results.map((result) => (
           <div key={result._id}>

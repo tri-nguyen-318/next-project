@@ -29,9 +29,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <StoreProvider>
-              <AppBar />
-              <div className='prose absolute top-10 right-0 bottom-0 left-0 min-w-screen'>
-                {children}
+              <div className='flex h-full flex-col'>
+                <AppBar />
+                <div className='flex-1'>{children}</div>
               </div>
             </StoreProvider>
           </ThemeProvider>
