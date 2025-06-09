@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useFormStatus } from 'react-dom';
-import { Button } from './button';
+import ButtonLoading from './loadingButton';
 
 type Props = { children: React.ReactNode };
 
@@ -10,12 +10,12 @@ export default function SubmitButton({ children }: Props) {
   const { pending } = useFormStatus();
 
   return (
-    <Button
+    <ButtonLoading
       type='submit'
-      aria-disabled={pending}
+      isLoading={pending}
       className='mt-2 w-full'
     >
       {children}
-    </Button>
+    </ButtonLoading>
   );
 }
