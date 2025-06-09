@@ -14,13 +14,14 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { createInvoice } from '@/lib/actions';
 import TypopraphyCode from '@/components/typography/TypopraphyCode';
 import { CreateInvoiceDialog } from './components/CreateInvoiceDialog';
 
 export default function Invoice() {
   const [query, setQuery] = useState<string>('');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [results, setResults] = useState<any[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const [isShowCreateInvoice, setIsShowCreateInvoice] =
     useState<boolean>(false);
@@ -37,9 +38,11 @@ export default function Invoice() {
 
   const onSeeding = () => {
     // Logic to seed the database
+    // eslint-disable-next-line no-console
     console.log('Seeding database');
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onCreateInvoice = async () => {};
 
   return (
